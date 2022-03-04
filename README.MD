@@ -28,8 +28,6 @@ In addition, the table used for storage of user id's and their rate plans uses a
 **SPARK** reads the csv file, checks for duplicate combinations of (Customer_id, Start_time and event_type). It saves the duplicate values into a new csv file.
 Afterwards, Spark is used to apply transformations on the data. The transformed data is loaded into Postgres with the help of a JDBC connector.  
 
-**Spark** connects to the Postgres DB, fetches the data, transforms it and creates charts with the help of **matplotlib**.  
-
 **Airflow** starts the ETL process. It sends and email if a csv file with duplicate primary keys exists, after which the file is deleted. It also checks if any of the records are inserted after the 6 month period using the batch_id data and Postgres Operator.
 
 ### Anwsers to questions
