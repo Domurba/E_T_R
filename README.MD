@@ -5,8 +5,10 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Task </a>
-      <a href="#about-the-project">Anwsers to the questions </a>
+      <a href="#about-the-project">About The Project </a>
+      <ul> 
+      <li><a href="#anwsers-to-questions">Anwsers to questions</a></li>
+      </ul> 
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>      
@@ -16,7 +18,7 @@
 </details>
 
 
-<!-- ABOUT THE Task -->
+<!-- ABOUT THE Project -->
 ## About The Project
 **Deocker** creates containers with Postgres, PgAdmin, Airflow and Spark.
 
@@ -30,6 +32,7 @@ Afterwards, Spark is used to apply transformations on the data. The transformed 
 
 **Airflow** starts the ETL process. It sends and email if a csv file with duplicate primary keys exists, after which the file is deleted. It also checks if any of the records are inserted after the 6 month period using the batch_id data and Postgres Operator.
 
+### Anwsers to questions
 3. **Explain how you would implement support and monitoring process.**
 
 PgAdmin dashboards can be an easy way to monitor the load on the database. 
@@ -58,13 +61,20 @@ Data analyst team would need to choose a tool, such as Tableau, for visualisatio
 
 DB ERD
 
-<!-- ![ERD 2022-01-28](https://user-images.githubusercontent.com/91464837/152539725-cc57f4b1-0fc1-435f-b979-776b2f05741f.png) -->
+![ERD_Diagram](https://user-images.githubusercontent.com/91464837/156760046-9b60f832-020a-4559-ba1b-8984d098e16c.png)
 
 Airflow DAG
 
+![Airflow_DAG](https://user-images.githubusercontent.com/91464837/156760098-bea027a5-3d36-49f6-a297-0e0f7b75e702.png)
 
-Airflow runs
+Airflow DAG runs
 
+![DAG_runs](https://user-images.githubusercontent.com/91464837/156760138-113a0846-e65e-44ea-b76a-837af353697c.png)
+
+SCD2 and f_usage tables
+
+![SCD2_table](https://user-images.githubusercontent.com/91464837/156760178-bf278116-04d9-4ffa-bca4-39734e500a9f.png)
+![f_usage_table](https://user-images.githubusercontent.com/91464837/156760181-0fd1e09c-c6fa-4e83-bb7e-81582ec1e114.png)
 
 ### Prerequisites
 [Docker](https://docs.docker.com/get-docker/)  
