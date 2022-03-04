@@ -22,7 +22,7 @@
 ## About The Project
 **Deocker** creates containers with Postgres, PgAdmin, Airflow and Spark.
 
-The **DWH** uses a snowflake schema. The Schema is predefined in the docker image.
+The **DWH** uses a star schema. The Schema is predefined in the docker image.
 In addition, the table used for storage of user id's and their rate plans uses a SCD2 (Slowly changing dimensions Type2) table in order to track history and changes to the customers plans.
 
 **SPARK** reads the csv file, checks for duplicate combinations of (Customer_id, Start_time and event_type). It saves the duplicate values into a new csv file.
